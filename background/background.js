@@ -1,4 +1,4 @@
-// ── Sensei · Background Service Worker ─────────────────────────────────────
+// ── DeepRead · Background Service Worker ─────────────────────────────────────
 // Handles:
 // 1. Highlight storage (save/get/remove)
 // 2. AI API calls (Groq / OpenAI)
@@ -21,7 +21,7 @@ chrome.runtime.onInstalled.addListener(() => {
   // Parent menu
   chrome.contextMenus.create({
     id: 'textlens-parent',
-    title: '🔍 Sensei',
+    title: '🔍 DeepRead',
     contexts: ['selection'],
   });
 
@@ -230,7 +230,7 @@ async function callAI(action, text, pageTitle, pageUrl) {
   const settings = await getSettings();
 
   if (!settings.apiKey) {
-    return { error: 'No API key configured. Click the Sensei icon → Settings to add your API key.' };
+    return { error: 'No API key configured. Click the DeepRead icon → Settings to add your API key.' };
   }
 
   const systemPrompt = SYSTEM_PROMPTS[action] || SYSTEM_PROMPTS.explain;
@@ -309,7 +309,7 @@ async function addNoteToNotion(text, pageTitle, pageUrl) {
   const settings = await getSettings();
 
   if (!settings.notionToken || !settings.notionDatabaseId) {
-    return { error: 'Notion not configured. Click Sensei icon → Settings to add your Notion token and database ID.' };
+    return { error: 'Notion not configured. Click DeepRead icon → Settings to add your Notion token and database ID.' };
   }
 
   try {

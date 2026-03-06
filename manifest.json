@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Sensei",
+  "name": "DeepRead",
   "version": "1.0.0",
   "description": "AI-powered reading companion — highlight, explain, summarize, and take notes on any webpage.",
   "permissions": [

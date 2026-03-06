@@ -1,8 +1,8 @@
-# Sensei 🔍 
+# DeepRead 🔍 
 
 > **Your AI-powered reading companion**
 
-Sensei is a Chrome Extension that helps you understand, summarize, and highlight text on any webpage or PDF. Select text, right-click, and let AI do the work.
+DeepRead is a Chrome Extension that helps you understand, summarize, and highlight text on any webpage or PDF. Select text, right-click, and let AI do the work.
 
 ## ✨ Features
 
@@ -22,14 +22,14 @@ Since this extension is in active development, you'll need to install it manuall
 2. Open Google Chrome and go to `chrome://extensions/`.
 3. Turn on **Developer mode** (toggle switch in the top right corner).
 4. Click the **Load unpacked** button (top left).
-5. Select the `textlens` / `sensei` folder that contains the `manifest.json` file.
-6. Pin the 🔍 "Sensei" icon to your toolbar for easy access!
+5. Select the `textlens` / `sensei` / `deepread` folder that contains the `manifest.json` file.
+6. Pin the 🔍 "DeepRead" icon to your toolbar for easy access!
 
 ## ⚙️ Configuration
 
 Before using the AI features, you need to configure your API keys.
 
-1. Click the Sensei 🔍 icon in your Chrome toolbar.
+1. Click the DeepRead 🔍 icon in your Chrome toolbar.
 2. Click **⚙️ Settings**.
 3. **AI Setup:**
    - Choose your provider (Groq is recommended for speed; OpenAI is also supported).
@@ -41,11 +41,11 @@ Before using the AI features, you need to configure your API keys.
 
 ## 📖 How to Use
 
-Everything in Sensei is controlled through the **right-click context menu**.
+Everything in DeepRead is controlled through the **right-click context menu**.
 
 1. Highlight any text on a webpage or PDF.
 2. **Right-click** on the selected text.
-3. Hover over **🔍 Sensei**.
+3. Hover over **🔍 DeepRead**.
 4. Choose an action:
    - **Explain / Summarize / Discuss**: A small result window will open showing the AI's response.
    - **Add Note to Notion**: Quietly saves the text and the page source to your Notion database.
@@ -55,7 +55,7 @@ To manage your highlights or clear them from a page, click the extension icon in
 
 ## 📦 How to Publish to the Chrome Web Store
 
-If you want to share Sensei with the world officially:
+If you want to share DeepRead with the world officially:
 
 1. **Zip the extension:** Select all the files *inside* this folder (make sure `manifest.json` is at the root) and compress them into a `.zip` file.
 2. **Register as a Developer:** Go to the [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole/) and pay the one-time $5 registration fee.

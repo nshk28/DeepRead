@@ -1,4 +1,4 @@
-// ── Sensei · Content Script ───────────────────────────────────────────────
+// ── DeepRead · Content Script ───────────────────────────────────────────────
 // Injected on every page. Handles:
 // 1. Text selection tracking (for context menu highlights)
 // 2. Highlight application + persistence
@@ -41,7 +41,7 @@
       if (lastRange && lastSelectionInfo && (!currentText || currentText === lastSelectionInfo.text)) {
         applyHighlight(color);
       } else {
-        console.warn('Sensei: Selection lost, cannot apply highlight');
+        console.warn('DeepRead: Selection lost, cannot apply highlight');
       }
       sendResponse({ success: true });
     }
@@ -57,7 +57,7 @@
     try {
       wrapRangeWithMark(lastRange, color, highlightId);
     } catch (err) {
-      console.warn('Sensei: Could not wrap selection, using fallback', err);
+      console.warn('DeepRead: Could not wrap selection, using fallback', err);
       wrapRangeFallback(lastRange, color, highlightId);
     }
 
