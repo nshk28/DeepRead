@@ -53,19 +53,3 @@ Everything in DeepRead is controlled through the **right-click context menu**.
 
 To manage your highlights or clear them from a page, click the extension icon in your toolbar.
 
-## 📦 How to Publish to the Chrome Web Store
-
-If you want to share DeepRead with the world officially:
-
-1. **Zip the extension:** Select all the files *inside* this folder (make sure `manifest.json` is at the root) and compress them into a `.zip` file.
-2. **Register as a Developer:** Go to the [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole/) and pay the one-time $5 registration fee.
-3. **Upload & Fill Info:** Click **+ New Item**, upload your `.zip` file.
-4. Add your store assets (Store icon, screenshots, description).
-5. **Privacy Practices:** Ensure you disclose that the extension sends text to remote APIs (Groq/OpenAI/Notion) based on user action, but does not collect data to your own servers.
-6. **Submit for Review!**
-
-## 🛠️ Tech Stack
-- Vanilla JavaScript (ES6+), HTML, CSS
-- Manifest V3
-- Chrome Storage API
-- Chrome Context Menus API
