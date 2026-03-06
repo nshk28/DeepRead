@@ -22,7 +22,7 @@ Since this extension is in active development, you'll need to install it manuall
 2. Open Google Chrome and go to `chrome://extensions/`.
 3. Turn on **Developer mode** (toggle switch in the top right corner).
 4. Click the **Load unpacked** button (top left).
-5. Select the `textlens` / `sensei` / `deepread` folder that contains the `manifest.json` file.
+5. Select the  `deepread` folder that contains the `manifest.json` file.
 6. Pin the 🔍 "DeepRead" icon to your toolbar for easy access!
 
 ## ⚙️ Configuration
