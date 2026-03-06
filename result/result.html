@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sensei — Result</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="result.css">
+</head>
+<body>
+  <div class="result-container">
+    <!-- Header -->
+    <div class="result-header">
+      <div class="result-brand">
+        <span class="brand-icon">🔍</span>
+        <span class="brand-name">Sensei</span>
+      </div>
+      <span class="result-action-badge" id="action-badge">—</span>
+    </div>
+
+    <!-- Selected text excerpt -->
+    <div class="result-excerpt" id="result-excerpt">—</div>
+
+    <!-- AI Response -->
+    <div class="result-body" id="result-body">
+      <div class="result-loading" id="result-loading">
+        <div class="spinner"></div>
+        <span>Thinking…</span>
+      </div>
+      <div class="result-content" id="result-content" style="display:none;"></div>
+    </div>
+
+    <!-- Footer -->
+    <div class="result-footer">
+      <button class="result-btn" id="btn-copy">📋 Copy</button>
+      <button class="result-btn result-btn-close" id="btn-close">Close</button>
+    </div>
+  </div>
+
+  <script src="result.js"></script>
+</body>
+</html>

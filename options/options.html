@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sensei Settings</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="options-container">
+    <div class="options-header">
+      <div class="brand">
+        <span class="brand-icon">🔍</span>
+        <h1 class="brand-name">Sensei Settings</h1>
+      </div>
+      <p class="brand-sub">Configure your AI provider, API keys, and integrations.</p>
+    </div>
+
+    <!-- AI Provider -->
+    <section class="card">
+      <h2 class="card-title">
+        <span>🤖</span> AI Provider
+      </h2>
+      <p class="card-desc">Select your AI provider and enter your API key. Your key is stored locally and never leaves your browser.</p>
+
+      <div class="form-group">
+        <label class="form-label" for="provider">Provider</label>
+        <select id="provider" class="form-select">
+          <option value="groq">Groq (Llama 3.3 70B)</option>
+          <option value="openai">OpenAI (GPT-4o mini)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="api-key">API Key</label>
+        <div class="input-row">
+          <input type="password" id="api-key" class="form-input" placeholder="Enter your API key...">
+          <button class="btn-icon" id="toggle-key" title="Show/hide key">👁️</button>
+        </div>
+        <p class="form-hint" id="key-hint">
+          Get a free Groq key at <a href="https://console.groq.com/keys" target="_blank">console.groq.com/keys</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Notion Integration -->
+    <section class="card">
+      <h2 class="card-title">
+        <span>📝</span> Notion Integration
+      </h2>
+      <p class="card-desc">Connect your Notion workspace to save notes directly from any webpage.</p>
+
+      <div class="form-group">
+        <label class="form-label" for="notion-token">Internal Integration Token</label>
+        <input type="password" id="notion-token" class="form-input" placeholder="ntn_...">
+        <p class="form-hint">
+          Create an integration at <a href="https://www.notion.so/my-integrations" target="_blank">notion.so/my-integrations</a>
+        </p>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="notion-db">Database ID</label>
+        <input type="text" id="notion-db" class="form-input" placeholder="Paste your database ID...">
+        <p class="form-hint">
+          The ID from your Notion database URL (32-character hex string)
+        </p>
+      </div>
+    </section>
+
+    <!-- Highlight Settings -->
+    <section class="card">
+      <h2 class="card-title">
+        <span>🖊️</span> Highlights
+      </h2>
+
+      <div class="form-group">
+        <label class="form-label">Default Color</label>
+        <div class="color-options" id="default-color">
+          <button class="color-option" data-color="yellow" style="background: rgba(255,220,50,0.45)" title="Yellow"></button>
+          <button class="color-option" data-color="green" style="background: rgba(80,200,100,0.40)" title="Green"></button>
+          <button class="color-option" data-color="pink" style="background: rgba(255,100,150,0.40)" title="Pink"></button>
+          <button class="color-option" data-color="blue" style="background: rgba(80,160,255,0.40)" title="Blue"></button>
+          <button class="color-option" data-color="orange" style="background: rgba(255,160,50,0.45)" title="Orange"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Save / Status -->
+    <div class="save-row">
+      <button class="btn-primary" id="btn-save">Save Settings</button>
+      <span class="save-status" id="save-status"></span>
+    </div>
+
+    <!-- Data Management -->
+    <section class="card card-muted">
+      <h2 class="card-title">
+        <span>📊</span> Data
+      </h2>
+      <div class="data-stats">
+        <span id="data-stats">Loading...</span>
+      </div>
+      <div class="data-actions">
+        <button class="btn-secondary" id="btn-export">Export Highlights</button>
+        <button class="btn-danger" id="btn-clear-all">Clear All Data</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sensei</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <div class="popup-header">
+      <div class="brand">
+        <span class="brand-icon">🔍</span>
+        <span class="brand-name">Sensei</span>
+      </div>
+      <div class="version">v1.0</div>
+    </div>
+
+    <!-- Status -->
+    <div class="status-card" id="status-card">
+      <div class="status-row">
+        <span class="status-label">Extension</span>
+        <label class="toggle">
+          <input type="checkbox" id="toggle-enabled" checked>
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-row">
+      <div class="stat">
+        <span class="stat-number" id="page-count">0</span>
+        <span class="stat-label">This page</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-number" id="total-count">0</span>
+        <span class="stat-label">Total saves</span>
+      </div>
+    </div>
+
+    <!-- API Status -->
+    <div class="config-card" id="api-status">
+      <div class="config-row">
+        <span class="config-icon">🤖</span>
+        <span class="config-label" id="api-label">No API key set</span>
+      </div>
+      <div class="config-row">
+        <span class="config-icon">📝</span>
+        <span class="config-label" id="notion-label">Notion not connected</span>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="popup-actions">
+      <button class="popup-btn" id="btn-settings">
+        <span>⚙️</span>
+        <span>Settings</span>
+      </button>
+      <button class="popup-btn" id="btn-clear">
+        <span>🗑️</span>
+        <span>Clear Page Highlights</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

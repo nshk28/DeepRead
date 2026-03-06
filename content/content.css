@@ -1,0 +1,42 @@
+/* ── TextLens · Content Styles ─────────────────────────────────────────────── */
+/* Only highlight styles live here — popup styles are in the Shadow DOM.       */
+
+/* ═══ HIGHLIGHTS ON THE PAGE ══════════════════════════════════════════════════ */
+
+mark[data-textlens] {
+  border-radius: 3px;
+  padding: 1px 0;
+  cursor: pointer;
+  transition: filter .15s;
+  position: relative;
+}
+mark[data-textlens]:hover {
+  filter: brightness(1.2);
+}
+/* Remove button on hover */
+mark[data-textlens]::after {
+  content: '✕';
+  position: absolute;
+  top: -8px; right: -8px;
+  width: 16px; height: 16px;
+  background: #e57373;
+  color: white;
+  border-radius: 50%;
+  font-size: 10px;
+  line-height: 16px;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .15s;
+}
+mark[data-textlens]:hover::after {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Highlight colors */
+mark[data-textlens][data-color="yellow"] { background: rgba(255,220,50,0.45); }
+mark[data-textlens][data-color="green"]  { background: rgba(80,200,100,0.40); }
+mark[data-textlens][data-color="pink"]   { background: rgba(255,100,150,0.40);}
+mark[data-textlens][data-color="blue"]   { background: rgba(80,160,255,0.40); }
+mark[data-textlens][data-color="orange"] { background: rgba(255,160,50,0.45); }
